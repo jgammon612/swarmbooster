@@ -134,6 +134,7 @@
         <subsystem xmlns="urn:jboss:domain:bean-validation:1.0"/>
         <subsystem xmlns="urn:jboss:domain:datasources:5.0">
             <datasources>
+                <xa-datasource jndi-name="java:jboss/datasources/myds_postgresql" pool-name="myds_postgresql-MyDS" use-java-context="true" enabled="true"> <xa-datasource-property name="DatabaseName">my_data</xa-datasource-property> <xa-datasource-property name="PortNumber">5432</xa-datasource-property> <xa-datasource-property name="ServerName">postgres</xa-datasource-property> <driver>postgresql</driver> <security> <user-name>luke</user-name> <password>secret</password> </security> <validation> <validate-on-match>true</validate-on-match> <background-validation>false</background-validation> <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLValidConnectionChecker"></valid-connection-checker> <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.postgres.PostgreSQLExceptionSorter"></exception-sorter> </validation></xa-datasource>
                 <!-- ##DATASOURCES## -->
                 <drivers>
                     <driver name="h2" module="com.h2database.h2">
